@@ -15,93 +15,116 @@
     }
     body {
       line-height: 1.6;
-      background-color: #f9f9f9;
-      color: #333;
+      background-color: #f3f4f6;
+      color: #111827;
     }
     header {
-      background-color: #1f2937;
+      background: linear-gradient(90deg, #1f2937, #111827);
       color: white;
       padding: 2rem 1rem;
       text-align: center;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     }
     header h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
+      font-weight: 700;
     }
     nav {
-      margin-top: 1rem;
+      margin-top: 1.2rem;
     }
     nav a {
       color: #e5e7eb;
       text-decoration: none;
-      margin: 0 1rem;
+      margin: 0 1.2rem;
       font-weight: 500;
-      transition: color 0.3s;
+      font-size: 1rem;
+      transition: color 0.3s ease;
     }
     nav a:hover {
       color: #60a5fa;
     }
     section {
-      padding: 4rem 1.5rem;
+      padding: 5rem 1.5rem;
       max-width: 1200px;
       margin: auto;
     }
     section h2 {
       text-align: center;
-      font-size: 2rem;
-      margin-bottom: 2rem;
+      font-size: 2.4rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
     }
     .info-boxes {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
-      justify-content: center;
     }
     .box {
       background: white;
-      border-radius: 0.75rem;
+      border-radius: 1rem;
       padding: 2rem;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      max-width: 320px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       text-align: center;
+      transition: transform 0.3s;
+    }
+    .box:hover {
+      transform: translateY(-5px);
     }
     .box i {
-      font-size: 2rem;
+      font-size: 2.5rem;
       margin-bottom: 1rem;
       color: #2563eb;
+    }
+    .box h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
     }
     .buttons {
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
-      margin-top: 2.5rem;
+      gap: 2rem;
       flex-wrap: wrap;
+      margin-top: 2.5rem;
     }
     .buttons a {
       background-color: #2563eb;
       color: white;
       padding: 1rem 2rem;
       text-decoration: none;
-      border-radius: 0.5rem;
-      font-weight: bold;
+      border-radius: 0.75rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
       transition: background-color 0.3s;
     }
     .buttons a:hover {
       background-color: #1d4ed8;
     }
     footer {
-      background-color: #1f2937;
-      color: #e5e7eb;
+      background-color: #111827;
+      color: #d1d5db;
       text-align: center;
       padding: 3rem 1rem;
       margin-top: 3rem;
     }
-    footer p {
+    footer p, footer a {
       margin: 0.5rem 0;
+      font-size: 0.95rem;
     }
     footer a {
       color: #93c5fd;
       text-decoration: none;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      nav a {
+        margin: 0 0.5rem;
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
@@ -121,17 +144,17 @@
       <div class="box">
         <i class="fas fa-store"></i>
         <h3>Our Business</h3>
-        <p>We are a trusted online reseller operating across Amazon, Flipkart, and Meesho, offering a wide range of quality products.</p>
+        <p>We are a trusted online reseller on Amazon, Flipkart, and Meesho, offering a diverse range of high-quality products.</p>
       </div>
       <div class="box">
         <i class="fas fa-shipping-fast"></i>
         <h3>Fast Delivery</h3>
-        <p>We ensure timely dispatch and fast delivery to enhance customer satisfaction and trust.</p>
+        <p>We prioritize speedy shipping and reliable service to ensure customer satisfaction.</p>
       </div>
       <div class="box">
         <i class="fas fa-user-shield"></i>
         <h3>Customer Trust</h3>
-        <p>Your trust is our priority. We are committed to quality, support, and ethical practices.</p>
+        <p>We are committed to trust, transparency, and providing support at every step of your shopping experience.</p>
       </div>
     </div>
   </section>
